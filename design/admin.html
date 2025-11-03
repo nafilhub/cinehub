@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/Favicon.png" />
+    <title>Admin Dashboard - CINEHUB</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
+      <a class="navbar-brand fw-bold text-danger fs-3" href="index.html">CINEHUB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="admin.html">Admin</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user.html">User</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center ms-auto">
+        <img src="assets/user.png" class="rounded-circle" width="35" alt="Admin" />
+      </div>
+    </nav>
+
+    <div class="main-wrapper">
+      <div class="container-fluid content">
+        <h4 class="text-white mb-4 mt-5">Dashboard Admin</h4>
+
+        <div class="table-responsive bg-dark p-3 rounded-3 border border-secondary">
+          <table class="table table-dark table-striped align-middle">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Judul Film</th>
+                <th>Kategori</th>
+                <th>Status</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>The Dark Knight</td>
+                <td>Film</td>
+                <td><span class="badge bg-success">Aktif</span></td>
+                <td>
+                  <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Stranger Things</td>
+                <td>Series</td>
+                <td><span class="badge bg-success">Aktif</span></td>
+                <td>
+                  <button class="btn btn-sm btn-warning"><i class="bi bi-pencil"></i></button>
+                  <button class="btn btn-sm btn-danger"><i class="bi bi-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-secondary pt-5 pb-4 border-top border-secondary-subtle mt-5">
+      <div class="container-fluid text-center">
+        <small>Copyright &copy; 2025 - CineHub. All Rights Reserved.</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="style.js"></script>
+  </body>
+</html>
 
