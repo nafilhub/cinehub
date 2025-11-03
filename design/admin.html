@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="assets/Favicon.png" />
+    <title>Admin Panel - CINEHUB</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top px-4">
+      <a class="navbar-brand fw-bold text-danger fs-3" href="index.html">CINEHUB</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-4">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="disimpan.html">Disimpan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="admin.html">Admin</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center ms-auto">
+        <img src="assets/user.png" class="rounded-circle" width="35" alt="Admin" />
+      </div>
+    </nav>
+
+    <!-- Konten Admin -->
+    <div class="main-wrapper">
+      <div class="container-fluid content">
+        <h4 class="text-white mb-4 mt-5">Panel Admin</h4>
+
+        <div class="card bg-dark text-white border-secondary mb-4">
+          <div class="card-header border-secondary">
+            <i class="bi bi-plus-circle me-2"></i> Tambah Film Baru
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-4">
+                  <label class="form-label">Judul Film</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" />
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">Kategori</label>
+                  <select class="form-select bg-dark text-white border-secondary">
+                    <option>Film</option>
+                    <option>Series</option>
+                  </select>
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label">Tahun Rilis</label>
+                  <input type="number" class="form-control bg-dark text-white border-secondary" />
+                </div>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">URL Gambar Poster</label>
+                <input type="text" class="form-control bg-dark text-white border-secondary" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Deskripsi</label>
+                <textarea class="form-control bg-dark text-white border-secondary" rows="3"></textarea>
+              </div>
+              <button class="btn btn-danger">Simpan</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="card bg-dark text-white border-secondary">
+          <div class="card-header border-secondary">
+            <i class="bi bi-list-ul me-2"></i> Daftar Film
+          </div>
+          <div class="card-body">
+            <table class="table table-dark table-striped align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Judul</th>
+                  <th>Kategori</th>
+                  <th>Tahun</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Joker</td>
+                  <td>Film</td>
+                  <td>2019</td>
+                  <td>
+                    <button class="btn btn-sm btn-warning me-2">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Stranger Things</td>
+                  <td>Series</td>
+                  <td>2022</td>
+                  <td>
+                    <button class="btn btn-sm btn-warning me-2">
+                      <i class="bi bi-pencil"></i>
+                    </button>
+                    <button class="btn btn-sm btn-danger">
+                      <i class="bi bi-trash"></i>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-secondary pt-5 pb-4 border-top border-secondary-subtle mt-5">
+      <div class="text-center">
+        <small>Copyright &copy; 2025 - CineHub. All Rights Reserved.</small>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
 
