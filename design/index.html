@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/Favicon.png" />
     <title>CINEHUB</title>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -21,29 +22,6 @@
       <a class="navbar-brand fw-bold text-danger fs-3" href="index.html"
         >CINEHUB</a
       >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-4">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Beranda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="disimpan.html">Disimpan</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
-      </div>
-
       <div class="d-flex align-items-center ms-auto">
         <input
           class="form-control form-control-sm me-2 bg-dark text-white border-secondary"
@@ -60,33 +38,28 @@
     </nav>
 
     <div class="main-wrapper">
-      <div class="container-fluid content">
-        <div class="filters mb-4">
-          <select
-            class="form-select d-inline w-auto bg-dark text-white border-secondary me-2"
-          >
-            <option>Alih suara</option>
-            <option>Teks</option>
-          </select>
-          <select
-            class="form-select d-inline w-auto bg-dark text-white border-secondary me-2"
-          >
-            <option>Indonesia</option>
-            <option>Inggris</option>
-          </select>
-          <select
-            class="form-select d-inline w-auto bg-dark text-white border-secondary"
-            id="category-filter"
-          >
-            <option value="semua" selected>Tampilkan Semua</option>
-            <option value="film-terbaru">Film Terbaru</option>
-            <option value="paling-dibeli">Paling Banyak Dibeli</option>
-            <option value="series-populer">Series Populer</option>
-          </select>
+      <!-- Banner -->
+      <div id="banner-carousel" class="movie-carousel mb-4">
+        <button class="scroll-btn left">&#10094;</button>
+        <div class="movie-row">
+          <img src="assets/tol.jpg" class="banner-poster" alt="Banner 1" />
+          <img src="assets/banner2.jpg" class="banner-poster" alt="Banner 2" />
+          <img src="assets/banner3.jpg" class="banner-poster" alt="Banner 3" />
         </div>
+        <button class="scroll-btn right">&#10095;</button>
+      </div>
 
-        <div id="film-terbaru" class="carousel-section">
-          <h4 class="text-white mb-3">Film Terbaru</h4>
+      <div class="container-fluid content">
+        <!-- Film Terbaru -->
+        <div id="film-terbaru" class="carousel-section" data-category="movie">
+          <h4 class="text-white mb-3">Terbaru</h4>
+
+          <div class="filters-pills mb-3">
+            <button class="filter-btn active" data-filter="movie">Movie</button>
+            <button class="filter-btn" data-filter="series">Series</button>
+            <button class="btn-genre-trigger js-open-genre-modal">Genre</button>
+          </div>
+
           <div class="movie-carousel">
             <button class="scroll-btn left">&#10094;</button>
             <div class="movie-row">
@@ -112,8 +85,17 @@
             <button class="scroll-btn right">&#10095;</button>
           </div>
         </div>
-        <div id="paling-dibeli" class="carousel-section">
+
+        <!-- Paling Banyak Dibeli -->
+        <div id="paling-dibeli" class="carousel-section" data-category="movie">
           <h4 class="text-white mb-3 mt-5">Paling Banyak Dibeli</h4>
+
+          <div class="filters-pills mb-3">
+            <button class="filter-btn active" data-filter="movie">Movie</button>
+            <button class="filter-btn" data-filter="series">Series</button>
+            <button class="btn-genre-trigger js-open-genre-modal">Genre</button>
+          </div>
+
           <div class="movie-carousel">
             <button class="scroll-btn left">&#10094;</button>
             <div class="movie-row">
@@ -129,8 +111,14 @@
             <button class="scroll-btn right">&#10095;</button>
           </div>
         </div>
-        <div id="series-populer" class="carousel-section">
-          <h4 class="text-white mb-3 mt-5">Series Populer</h4>
+
+        <!-- Penawaran -->
+        <div
+          id="series-populer"
+          class="carousel-section"
+          data-category="series"
+        >
+          <h4 class="text-white mb-3 mt-5">Penawaran</h4>
           <div class="movie-carousel mb-5">
             <button class="scroll-btn left">&#10094;</button>
             <div class="movie-row">
@@ -161,6 +149,7 @@
               ribuan jam tontonan berkualitas tinggi di mana saja, kapan saja.
             </p>
           </div>
+
           <div class="col-md-3 col-lg-2 mx-auto mb-4">
             <h6 class="text-uppercase fw-bold text-white mb-4">Link Cepat</h6>
             <p>
@@ -180,6 +169,7 @@
               <a href="#" class="text-secondary text-decoration-none">Kontak</a>
             </p>
           </div>
+
           <div class="col-md-4 col-lg-3 mx-auto mb-md-0 mb-4" id="contact">
             <h6 class="text-uppercase fw-bold text-white mb-4">Contact Kami</h6>
             <p><i class="bi bi-envelope me-3"></i> email@cinehub.com</p>
@@ -206,14 +196,51 @@
       </div>
 
       <hr class="mb-4" style="border-color: #333" />
-
       <div class="text-center">
         <small>Copyright &copy; 2025 - CineHub. All Rights Reserved.</small>
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Modal Genre -->
+    <div class="modal-overlay"></div>
+    <div id="genre-modal" class="modal-container">
+      <div class="modal-header">
+        <h5 class="modal-title">Pilih Genre</h5>
+        <button type="button" class="modal-close-btn js-close-modal">
+          &times;
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="genre-grid">
+          <button class="genre-btn">Action</button>
+          <button class="genre-btn">Adventure</button>
+          <button class="genre-btn">Animation</button>
+          <button class="genre-btn">Biography</button>
+          <button class="genre-btn">Comedy</button>
+          <button class="genre-btn">Coming-of-age</button>
+          <button class="genre-btn">Crime</button>
+          <button class="genre-btn">Dark Comedy</button>
+          <button class="genre-btn">Disaster</button>
+          <button class="genre-btn">Drama</button>
+          <button class="genre-btn">Family</button>
+          <button class="genre-btn">Fantasy</button>
+          <button class="genre-btn">History</button>
+          <button class="genre-btn">Horror</button>
+          <button class="genre-btn">Mystery</button>
+          <button class="genre-btn">Musical</button>
+          <button class="genre-btn">Psychological Thriller</button>
+          <button class="genre-btn">Romance</button>
+          <button class="genre-btn">Sci-Fi / Science Fiction</button>
+          <button class="genre-btn">Sci-Fi & Fantasy</button>
+          <button class="genre-btn">Superhero</button>
+          <button class="genre-btn">Survival</button>
+          <button class="genre-btn">Thriller</button>
+          <button class="genre-btn">Western</button>
+        </div>
+      </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="style.js"></script>
   </body>
 </html>
